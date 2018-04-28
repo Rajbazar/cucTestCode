@@ -56,6 +56,12 @@ public class androidTest {
 		launchApp(deviceNum);
 	}
 	
+	@Given("^\"(.*)\" I launch the application$")
+	public void launchAppTest(String deviceNum) throws Throwable {
+		installApp(deviceNum,0);
+		launchApp(deviceNum);
+	}
+	
 	@Then("^\"(.*)\" I tap on agreement checkBox$")
 	public void clickCheckBox(String deviceNum) throws Throwable {
 		driver.findElement(By.id("terms_checkbox")).click();

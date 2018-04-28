@@ -39,6 +39,7 @@ Feature: Test Navigation Flow
   
   @Sanity @TC4
   Scenario: Sign In Flow
+  	Given "D1" I launch the application
     Then "D1" I tap on signIn button
     Then "D1" I wait for "2" seconds
     Then "D1" I enter the "phoneLoginNumber"
